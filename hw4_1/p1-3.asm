@@ -3,10 +3,15 @@
 // Test ST instruction
 // 10000 sss ddd iiiii | ST Rd, Rs, imm | Mem[Rs + I(sign ext.)] <- Rd
 
-lbi r1, 9
-lbi r2, 8
-lbi r3, 9
-add r3, r1, r2
-st r3, r2, 7
-add r2, r3, r1
+// Tests the successful storage of the required value of MEM[R3+4] depending on whether the branch is taken. We operate under the 'branch not taken' assumption, but this clearly fails since the condition is true.
+lbi r1, 0
+lbi r2, 2
+lbi r3, 4
+beqz r1, 6
+st r1, r3, 4
+ld r4, r3, 4
+halt
+.BRTAKEN:  
+st r2, r3, 4
+ld r4, r3, 4
 halt

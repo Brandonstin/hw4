@@ -9,5 +9,6 @@ subi r3, r4, 2
 add r2, r3, r4
 lbi r5, 5
 lbi r6, 7
+halt
 .BRTAKEN:
 add r1, r2, r3

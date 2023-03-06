@@ -1,1 +1,5 @@
 // Write your answer to Problem 1 (b) here
+
+p1-1 is intended to test EX-MEM forwarding. We created a RAW data hazard with r1 between the add and the st
+instructions, which needs to be resolved. Because the data is available in the EX stage of the add instruction, 
+we are able to forward to the st instruction.

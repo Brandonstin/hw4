@@ -7,3 +7,7 @@ we are able to forward to the st instruction.
 p1-2 is intended to test MEM-EX forwarding. We created a RAW data hazard between with r4 the ld and add instructions.
 The data will be available within the MEM stage and will be needed in the EX state of the add instruction. As a result,
 we are able to forward to the add instruction. 
+
+p1-3 tests whether the correct value is stored into MEM[R3+4]. In the case the branch is taken we store the contents of R2
+and the contents of R1 otherwise. Operating under the branch-not-taken assumption, we notice that the branch condition holds true.
+The ST instruction(along the branch-not-taken path) needs to be flushed before we jump to the branch label. 

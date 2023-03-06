@@ -8,10 +8,11 @@ lbi r1, 1
 lbi r2, 2
 lbi r3, 3
 lbi r4, 4
-beqz r1, 10
-beqz r2, 8
-beqz r3, 6
-beqz r4, 4
+beqz r1, .END
+beqz r2, .END
+beqz r3, .END
+beqz r4, .END
 add r5, r1, r2
 add r6, r3, r4
+.END:
 halt

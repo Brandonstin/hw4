@@ -1,8 +1,7 @@
 // Write your answer to Problem 2 (b) and (c) here
 
 For p2-1, the branch is taken if r1 is not equal to 0. r1 is initially stored with 4, r2 with 2 and r3 with 0. 
-We then subtract r2 from 5 and store that result into r1 and then check if the branch is equal to 0. If it is, we jump down to the target 
-and instruction and skip over the next subi instruction.
+We then subtract r2 from 5 and store that result into r1 and then check if the branch is equal to 0. With a branch-not-taken philosophy, we immediately fetch the next instruction until the branch's condition is determined. In this case, we benefit from this since the branch isn't taken and our processor is able to continue carrying out the subsequent instructions at full speed.
 
 
 

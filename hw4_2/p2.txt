@@ -8,7 +8,7 @@ and instruction and skip over the next subi instruction.
 
 
 
-By using branch prediction, we can potentially save ourselves from needing to stall our flops. For either a branch-taken prediction or a not-taken prediction, 
-we run the risk of needing to flush the instructions and wasting some clock cycles. However, if we do predict correctly, then we keep our CPI lower by not needing to stall 
-with the only drawback being some clock cycles.
+(b) By using branch prediction, we can potentially save ourselves from needing to stall our flops. For either a branch-taken prediction or a not-taken prediction, 
+we run the risk of needing to flush the instructions and wasting some clock cycles. However, if we do predict correctly, then we keep our CPI lower by not needing to stall with the only drawback being some clock cycles.
 
+(c) No, branch prediction will not always take 1 cycle. In the case of BEQZ and likewise instructions, which require a register value to be read, we need to wait more than 1 cycle to determine if a branch will be taken.

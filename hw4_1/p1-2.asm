@@ -6,7 +6,7 @@
 lbi r1, 6
 lbi r2, 9
 lbi r3, 0
-st r2, r2, 2
-add r2, r1, r2
+st r2, r1, 5
+ld r4, r1, 5
+add r4, r4, r2
 halt
-

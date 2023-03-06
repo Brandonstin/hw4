@@ -3,6 +3,7 @@
 // Test ST instruction
 // 10000 sss ddd iiiii | ST Rd, Rs, imm | Mem[Rs + I(sign ext.)] <- Rd
 
+// Tests MEM-EX forwarding since we load the contents at MEM[R1+5] into R4 which is subsequently used for the next instruction(i.e. ADD)
 lbi r1, 6
 lbi r2, 9
 lbi r3, 0

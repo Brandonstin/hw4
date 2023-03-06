@@ -2,7 +2,6 @@
 
 // Test ST instruction
 // 10000 sss ddd iiiii | ST Rd, Rs, imm | Mem[Rs + I(sign ext.)] <- Rd
-
 lbi r1, 4
 lbi r2, 2
 lbi r3, 0

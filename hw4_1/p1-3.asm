@@ -8,7 +8,7 @@
 lbi r1, 0
 lbi r2, 2
 lbi r3, 4
-beqz r1, 6
+beqz r1, .BRTAKEN
 st r1, r3, 4
 ld r4, r3, 4
 halt

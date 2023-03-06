@@ -1,1 +1,14 @@
 // Write your answer to Problem 2 (b) and (c) here
+
+For p2-1, the branch is taken if r1 is not equal to 0. r1 is initially stored with 4, r2 with 2 and r3 with 0. 
+We then subtract r2 from 5 and store that result into r1 and then check if the branch is equal to 0. If it is, we jump down to the target 
+and instruction and skip over the next subi instruction.
+
+
+
+
+
+By using branch prediction, we can potentially save ourselves from needing to stall our flops. For either a branch-taken prediction or a not-taken prediction, 
+we run the risk of needing to flush the instructions and wasting some clock cycles. However, if we do predict correctly, then we keep our CPI lower by not needing to stall 
+with the only drawback being some clock cycles.
+

@@ -1,5 +1,9 @@
 // Write your answer to Problem 1 (b) here
 
-p1-1 is intended to test EX-MEM forwarding. We created a RAW data hazard with r1 between the add and the st
+p1-1 is intended to test EX-EX forwarding. We created a RAW data hazard with r1 between the add and the st
 instructions, which needs to be resolved. Because the data is available in the EX stage of the add instruction, 
 we are able to forward to the st instruction.
+
+p1-2 is intended to test MEM-EX forwarding. We created a RAW data hazard between with r4 the ld and add instructions.
+The data will be available within the MEM stage and will be needed in the EX state of the add instruction. As a result,
+we are able to forward to the add instruction. 
